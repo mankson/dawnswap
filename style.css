@@ -1,0 +1,140 @@
+:root {
+  --bg-color: #0a0a0a;
+  --text-color: #f0f0f0;
+  --accent-color: #00ff00;
+  --muted-color: #666;
+  --border-color: #333;
+  --link-color: #4af626;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('./fonts/FiraCode-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 1rem;
+  font: 400 0.95rem/1.6 'Fira Code', monospace;
+  color: var(--text-color);
+  background: var(--bg-color);
+  max-width: 900px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+header h1, header h1 a {
+  margin: 0;
+  font: normal 1.5rem 'Fira Code';
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.nav-container {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-container a {
+  color: var(--text-color);
+  padding: 0.25rem 0.5rem;
+  border: 1px solid transparent;
+}
+
+.nav-container a:hover, .nav-container a.active {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+main { margin: 1rem 0; flex: 1; }
+
+h2, h3 {
+  color: var(--accent-color);
+  margin: 1.5rem 0 1rem;
+  font-weight: normal;
+}
+
+h2 { font-size: 1.3rem; }
+h3 { font-size: 1.1rem; }
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--link-color);
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+li {
+  margin: 0.5rem 0;
+}
+
+pre, .card {
+  margin: 1.25rem 0;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-left: 3px solid var(--accent-color);
+  overflow-x: auto;
+}
+
+code {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.2rem 0.25rem;
+  font-size: 0.9em;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-color);
+  color: var(--muted-color);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  body { padding: 0.75rem; }
+  .nav-container { flex-direction: column; }
+}
+
+.toggle-header { cursor: pointer; }
+
+.toggle-arrow {
+  display: inline-block;
+  transition: transform 0.3s;
+  font-size: 0.8em;
+}
+
+.collapsed .toggle-arrow { 
+  transform: rotate(-90deg); 
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.toggle-header:not(.collapsed) + .collapsible-content {
+  max-height: 5000px;
+}
