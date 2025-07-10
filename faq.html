@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Dawn</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.toggle-header').forEach(header => {
+                header.classList.add('collapsed');
+                header.onclick = () => header.classList.toggle('collapsed');
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Dawn</a></h1>
+    </header>
+    
+    <div class="nav-container">
+        <a href="index.html">about</a>
+        <a href="haveno.html">dawnswap</a>
+        <a href="resources.html">resources</a>
+        <a href="faq.html" class="active">faq</a>
+        <a href="contact.html">contact</a>
+    </div>
+
+    <main>
+        <h2>FAQ - Dawnswap</h2>
+        
+        <div class="book">
+            <h2 class="toggle-header">How does Dawnswap work ?<span class="toggle-arrow">▼</span></h2>
+            <div class="collapsible-content">
+              <p>Dawnswap is an open source decentralized peer-to-peer trading network. The software runs on your own machine, allowing you to trade with other people using the same software.</p>
+            </div>
+        </div>
+
+        <div class="book">
+            <h2 class="toggle-header">How does Dawnswap handle privacy and security ? <span class="toggle-arrow">▼</span></h2>
+            <div class="collapsible-content">
+              <p>Dawnswap, a Haveno network, is open source, uses Tor and Monero combined with end to end encryption to allow you to focus on safe trading.</p>
+            </div>
+        </div>
+      
+        <div class="book">
+            <h2 class="toggle-header">Which crypto currencies are supported ? <span class="toggle-arrow">▼</span></h2>
+            <div class="collapsible-content">
+              <p>Dawnswap supports currently the following crypto currenties:
+
+                 Monero, Bitcoin, USDT (ERC-20 + TRC-20), Ethereum, Litecoin, Bitcoin Cash</p>
+            </div>
+        </div>
+
+      
+        <div class="book">
+            <h2 class="toggle-header">Which fiat currencies and payment methods are supported ?<span class="toggle-arrow">▼</span></h2>
+            <div class="collapsible-content">
+              <p>Most fiat currencies are support using many common payment methods from all over the world including cash in person.</p>
+            </div>
+        </div>
+
+      
+        <div class="book">
+            <h2 class="toggle-header">What do i need to start using Dawnswap ?<span class="toggle-arrow">▼</span></h2>
+            <div class="collapsible-content">
+              <p>Just a computer and an internet connection to start trading. Create your trade account profile and start trading. All data is stored locally on your computer and only what is needed for the trade is shared with your trade partner.</p>
+            </div>
+        </div>
+
+      
+        <div class="book">
+            <h2 class="toggle-header">Does Dawnswap do KYC ?<span class="toggle-arrow">▼</span></h2>
+            <div class="collapsible-content">
+              <p>No, Dawnswap is open source decentralized software where people trade directly with each other. It remains always important to do your own research and taking appropriate measures depending on your requirements and that of your jurisdiction.</p>
+            </div>
+        </div>
+
+      
+        <div class="book">
+            <h2 class="toggle-header">How long do transactions take ?<span class="toggle-arrow">▼</span></h2>
+            <div class="collapsible-content">
+              <p>This depends on the trade method and trader. A crypto transaction can conclude in minutes while fiat methods can take longer depending on the payment method.</p>
+            </div>
+        </div>
+
+      
+        <div class="book">
+            <h2 class="toggle-header">How does Dawnswap resolve trade disputes ?<span class="toggle-arrow">▼</span></h2>
+            <div class="collapsible-content">
+              <p>Traders can activate the builtin arbitration protocol in case a dispute arises. One of the arbitrators takes the case following procedure to gather information and further evidence from both traders. All arbitrators will resolve a dispute in a clear and fair way.</p>
+            </div>
+        </div>
+
+      
+        <div class="book">
+            <h2 class="toggle-header">Are there trading fees ?<span class="toggle-arrow">▼</span></h2>
+            <div class="collapsible-content">
+              <p>Dawnswap charges a minor fee which is used to maintain and support the Haveno based platform operations. Currently the fee is set to 0.6 %.</p>
+            </div>
+        </div>
+      
+    </main>
+
+    <footer>
+        <p>No rights reserved - <a href="https://github.com/dawn-collective/haveno-dawn/" target="_blank">Dawnswap Github</a> - <a href="https://github.com/haveno-dex" target="_blank">Haveno Github</a></p>
+    </footer>
+</body>
+</html>
